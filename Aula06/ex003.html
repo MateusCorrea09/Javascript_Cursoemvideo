@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meu primeiro programa</title>
+    <style>
+        body{background-color: rgb(130, 181, 194);
+        color: white;
+        font: normal 25pt arial;
+        }
+        h1{color: rgb(238, 229, 181);}
+        
+    </style>
+</head>
+<body>
+    <h1>Olá mundo! ou Hello World!</h1>
+    <p>Ufa! me livrei da maldição :D</p> 
+    <script>
+        //  Como dito anteriemente o '+' eçe serve para concatenação mas também para adição
+        //entretanto, é necessário que os elementos sejam de tipos específicos de dados para
+        //que o Javascript possa entender qual dos 'efeitos' devem ser acionados.
+        // para adição -> (number) + (number)
+        // para concatenação -> (string) + (string)
+        //no exemplo abaixo há concatenação e o seguinte um de adição
+        var n1 = window.prompt('Entre com N1: ')
+        var n2 = window.prompt('Entre com N2: ')
+        concatenacao = n1 + n2
+        window.alert('N1 concatenado com n2 [ '+ concatenacao +' ]')
+        //o 'window.prompt' retorna uma string obrigatóriamente, logo é encessário realizar uam conversão
+        //de string para int. Usamos o Number.parseInt(n) para realizar a conversão
+        // da pra fazer também usando uma solução similar ao do python, convertendo já logo na entrada dos dados
+        //var n2 = Number.parseInt(window.prompt('Entre com N2: '))
+        soma = Number.parseInt(n1) + Number.parseInt(n2) // O javascript é sensível a caracteres então tome cuidado com o maiúsculo  
+        window.alert('N1 somado com n2 ['+ soma +']')
+        // no javascript temos a solução de apenas tratar com Number(n) dessa forma deixamos que o próprio sistema
+        //decida se a entrada é um float ou int, e ele irá entender isso a partir das entradas e realizar a operação de soma
+
+        //Em determinadas situações podemos realizar a conversão de um int para uma string, para isso usamos o
+        //'string(n)' ou 'n.toString()' dica ao critério do programador e da situação :D
+        // Existem formas mais eficiêntes de trabalahr com strings nas versões do node mais atuais, usamos 'PlaceHolders'
+        //ATENÇÃO devemos usar CRASE ao invés de aspas simples
+        window.alert(`a variavel n1 ${n1} e n2 ${n2} somam ${soma}`)
+
+</script>
+</body>
+</html>

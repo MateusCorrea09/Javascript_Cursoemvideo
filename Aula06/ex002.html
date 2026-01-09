@@ -10,17 +10,18 @@
         font: normal 25pt arial;
         }
         h1{color: rgb(238, 229, 181);}
-        
+        /*Esse é um comentário*/
     </style>
 </head>
 <body>
     <h1>Olá mundo! ou Hello World!</h1>
-    <p>Ufa! me livrei da maldição :D</p>
+    <p>Ufa! me livrei da maldição :D</p> <!--Esse é um comentário-->
     <script>
-        window.alert('Minha primeira mensagem!')
-        window.confirm('Está gostando de JS? ')
-        window.prompt('Qual seu nome?')
 
+        var nome =  window.prompt('Qual seu nome?') // Esse é um comentário
+        //para receber e armazenar dados em uma variavel em javascript precimaos usar o 'var' e depois nomear esse 'var'
+        //depos de fazer isso nós podemos usar a informação que recebemos para vários fins
+        window.alert('Prazer em te conhecer ' + nome + '!')
     </script>
 </body>
 </html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body{
+        font: normal 14pt arial;
+    }
+</style>
+<body>
+    <script>
+
+                //Strings são muito importantes para nós programadores, são um tipo de dado que tem diversas características.
+        //Em um exempplo
+        var nome = 'Mateus'
+        // podemos retornar o tamanho de ums string com nome_da_variavel.length
+        window.alert(`A variavel ${nome} tem ${nome.length} caracteres`)
+        //podemos deixar todos so caracteres de uma string em maiúsculo colocando o nome_da_variavel.toUpperCase()
+        window.alert(`A variavel ${nome} usando o toUpperCase() fica : ${nome.toUpperCase()} `)
+        //podemos deixar tiudo em minúsculo usando o nome_da_variavel.toLowerCase()
+        window.alert(`A variavel ${nome} usando o toLowerCase() fica : ${nome.toLowerCase()} `)
+        
+        //Podemos escrever diretamente no documento usando o 'document', atenção... precisamos criar um style{} e adicionar algumas coisas lá tbm, para ficar ideal
+        document.write(`Olá <strong>${nome}</strong> seu nome tem ${nome.length} letras! <br/>`)
+        //para personalizarmos a escrita podemos usar <strong></strong> para deixar em negrito, e ao final de cada escrita
+        //podemos colcoar o <br/> para quebrar as linhas
+        document.write(`Seu nome em minúsculo é ${nome.toLocaleLowerCase()}! <br/>`)
+        document.write(`Seu nome em maiúsculo é ${nome.toUpperCase()}!<br/>`)
+        
+        //  tratamento de entradas é dfundamental para que possamos realizar determinadas operações, com isso... podemos delimitar um número
+        //de caracteres específico usando o '.toFixed(número de caracteres depois da virgula)'
+        var n1 = 12.77777
+        document.write(`O valor de n1 é <strong>${n1}</strong><br/>`)
+        document.write(`O valor de n1 com 2 casas depois da virgulda é <strong>${n1.toFixed(2)}</strong><br/>`)
+        document.write(`O valor sem o '<strong>.</strong> e com <strong>,</strong> é <strong>${n1.toFixed(2).replace('.',',')}'`)
+    </script>
+</body>
+</html>
