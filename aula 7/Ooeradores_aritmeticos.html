@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body{font: normal 12pt arial }
+</style>
+<body>
+    <script>
+        //  Operadores aritméticos são fundamentais para a realização de calculos em diversas situações e linguagens de programação
+        //é através deles que nós programadores podemos realizar calculos e chegar em resultados
+        var n1 = 5
+        var n2 = 2
+        var n3 = 3
+        document.write(`<strong>Operadores aritméticos:</strong> </br>`)
+        document.write(`Soma = ${n1} <strong>+</strong> ${n2} = ${n1+n2}</br>`)
+        document.write(`Subtração = ${n1} <strong>-</strong> ${n2} = ${n1-n2}</br>`)
+        document.write(`Multiplicação = ${n1} <strong>*</strong> ${n2} = ${n1*n2}</br>`)
+        document.write(`Divisão = ${n1} <strong>/</strong> ${n2} = ${n1/n2}</br>`)
+        document.write(`Resto da divisão = ${n1} <strong>%</strong> ${n2} = ${n1%n2}</br>`)
+        document.write(`Potenciação = ${n1} <strong>**</strong> ${n2} = ${n1**n2}</br>`)
+        document.write(`<strong>Precedência de operadores</strong> </br>`)
+        //  A depender da organização dos operadores será indicado a prioridade dos calculos a serem
+        //realizados. Exemplo: a primeira prioridade é sempre os Parênteses, em seguida a potência e
+        //por final a divisão, multiplicação e o resto da divisão juntas com a mesma prioridade.
+        document.write(`A Divisão é feito primeiro = ${n1} + ${n2} <strong>/</strong> ${n3} = ${n1+n2/n3}</br>`)
+        document.write(`A Multiplicação é feito primeiro = ${n1} + ${n2} <strong>*</strong> ${n3} = ${n1+n2*n3}</br>`)
+        document.write(`Com os parênteses, a soma se torna a prioridade = (${n1} <strong>+</strong> ${n2}) <strong>*</strong> ${n3} = ${(n1+n2)*n3}</br>`)
+        document.write(`<strong>Operadores de atribuição</strong></br> Usamos por exemplo 'var' para atribuir um valor a uma variavel e colocamos o <strong>'='</strong></br>`)
+        var n4 = n1 + n2 //  usando a atribuição
+        document.write(`Exemplo: var n4 (${n4}) = var n1 (${n1}) + var n2 (${n2})</br>`)
+        //Podemos dar qualquer nome a esse 'var' exemplo: var a, var b, var n ...
+        document.write(`<strong>Incremento</strong></br>`)
+        var x = 5
+        document.write(`Exemplo: var x = ${x}</br>`)
+        document.write(`var x = x + 1  ou  <strong>x++</strong></br>`)
+        x = x + 1
+        document.write(`var x  = ${x}</br>`)
+        document.write(`<strong>Decremento</strong></br>`)
+        document.write(`var x = x - 1 ou <strong>x--</strong></br>`)
+        x = x - 1
+        document.write(`<strong>var x  = ${x}</strong></br>`)
+
+
+    </script>
+</body>
+</html>

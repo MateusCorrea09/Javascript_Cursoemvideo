@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body{font: normal 12pt arial }
+
+</style>
+<body>
+    <script>
+        document.write(`<strong>Operadores relacionais</strong>  (Esses mesmos retornam True ou False)</br>`)
+        //São usados para testar ipóteses e a partir dos seus resultados o sistema tomara decisões :D
+        document.write(`Maior que '>'</br> Menor que '<'</br> Menor ou igual a '<='</br> Mior ou igual a '>='</br> Igual a '=='</br> Diferente de '!='</br>`)
+        var curso = 'JavaScript'
+        var preço = 1200
+        document.write(`<strong>Exemplos:</strong></br>`)
+        document.write(`var 'curso' é igual a 'Python?' [${curso == 'Python?'}]</br>`)
+        document.write(`var 'preço' é maior que R$ 100,00 [${preço > 100}]</br>`)
+
+        //  Imporante salientar o conceito de 'Identidade' em que o '==' e o '!=' não testão os tipos de variaveis e ssuas
+        //respectivas grandezas
+        document.write(`<strong>Identidade</strong></br>`)
+        document.write(`5 é igual a 5 [${5 == 5}]</br>`)
+        document.write(`5 é igual a '5' [${5 == '5'}]</br>`)
+        //  para corrigir isso usamos o '===' chamado 'Operador de igualdade restrita' e a partir dele o tipo de variavel
+        //é testado também
+        document.write(`5 é igual (usando o '===') a 5 [${5 === 5}]</br>`)
+        document.write(`5 é igual (usando o '===') a '5' [${5 === '5'}]</br>`)
+        document.write(`5 é diferente (usando o '!==') a 5 [${5 !== 5}]</br>`)
+        document.write(`5 é diferente (usando o '!==') a '5' [${5 !== '5'}]</br>`)
+
+        document.write(`<strong>Operadores lógicos</strong></br>`)
+        document.write(`São 3 em seu total:</br> '!' quer dizer não</br> '&&' quer dizer 'e'</br>'||' quer dizer 'ou'</br>`)
+        // utilizamos em if ou em loops, muito utilziado nos exercícios de lógica que fiz nos últimos cursos
+        
+        //  Operadores ternário são utilizados para simplificar if e a aprtir deles delimitar um conjunto de duas possibildiades, True ou False, e
+        //seus respectivos resultados
+        document.write(`<strong>Operadores Ternários</strong> ({Teste} <strong>?</strong> {caso for True} <strong>:</strong> {caso for False})</br>`)
+        document.write(`" 5 > 10 ? Exibir: 'Sim' : Exibir: 'Não' " [${5>10 ? 'Sim' : 'Não'}]</br>`)
+        document.write(`" curso == Python ? Exibir: 'Sim' : Exibir: 'Não' " [${curso=='Python' ? 'Sim' : 'Não'}]</br>`)
+        media = 8
+        document.write(`" media > 7 ? Exibir: 'Aprovado' : Exibir: 'Reprovado' " [${media > 7 ? 'Aprovado' : 'Reprovado'}]</br>`)
+        //muito interessante não conhecia esse recurso :D
+    </script>
+</body>
+</html>
