@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Somando números</title>
+</head>
+<style>
+    body{
+        font: normal 15pt arial;
+        color: rgb(24, 15, 75);
+        background: rgb(255, 217, 0);
+    }
+    input{
+        font: normal 15pt arial;
+        width: 100px;
+    }
+    div#res{
+        margin-top: 100px;
+        text-align:justify;
+    }
+</style>
+<body>
+    <h1>Somando valores</h1>
+    <input type="number" name="txtn1" id="txtn1">
+    <input type="number" name="txtn2" id="txtn2">
+    <input type="button" value="Somar" onclick="somar_valores()">
+    <div id = "res" >resultado</div>
+    <script>
+        function somar_valores()
+        {
+            var n1 = window.document.getElementById('txtn1')
+            var n2 = window.document.getElementById('txtn2')
+
+            //Aqui vc tem que pegar o 'value' que está dentro de n1... porque n1 é uma caixa de texto até o momento
+            var valor1 = Number(n1.value)
+            var valor2 = Number(n2.value)
+            var resultado = valor1 + valor2
+
+            var a = window.document.getElementById('res')
+            a.innerText = resultado
+            //window.alert(`O resultado é ${resultado}`)
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    div#area{
+        font: normal 15pt arial;
+        background: rgb(29, 14, 53);
+        color:  rgb(247, 231, 15);
+        width: 200px;
+        height: 200px;
+        line-height: 200px;
+        text-align: center;
+    }
+</style>
+<body>
+    <div id = 'area'>
+        Interaja...
+
+    </div>
+    <script>
+        //  Blocos em JS são delimitados em chaves '{}' e podemos usa-los para construír funções que serão carregadas a partir de eventos
+        //disparados por meio de ações/interações/gatilhos e etc :D
+        //para criar essas funções usamos o termo 'function' + nome_da_função + (opcional: parâmetro){...}
+        //  Os eventos podem ser configurados tanto na parte do JS quanto na parte do HTML. Exemplo: no HTML em <div> podemos adicionar o
+        //Evento 'onclick = "Evento_O_que_Acontece"' e com isso chamar poor exemplo uma função de alterar altura elargura.... ou alterar cor :D
+
+        var a = window.document.getElementById('area')
+
+        //  Ao invés de fazer essa linha grande (<div id = 'area' onclick="clicar()" onmouseenter="entrar()" onmouseout="saiu()">)
+        //vc pode usar o addEventListener() que ele fica prestando a atenção se ta acontecendo algum evento a todo momento, dessa forma
+        //seu HTM fica mais limpo... ai oq é de HTML fica no HTML e oq é de JS fica no JS :D 
+        a.addEventListener('click',clicar)
+        a.addEventListener('mouseenter',entrar)
+        a.addEventListener('mouseout',saiu)
+
+        function clicar(){
+            //Função que pode ser chamada em algum lugar no seu código
+            //var a = window.document.getElementById('area') //Cria um objeto que conecta o JS com o HTML e esse mesmo objeto
+            a.innerText = 'CLICOU!' // muda o TEXTO dentro de <div>
+        }
+        function entrar(){
+            a.innerText = 'ENTROU!'
+        }
+        function saiu(){
+            a.innerText = 'SAIU!'
+        }
+
+    </script>
+</body>
+</html>

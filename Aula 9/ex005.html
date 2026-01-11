@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Primeiros passos com DOM</title>
+</head>
+<style>
+ body{
+    background: rgb(89, 192, 159);
+    color: rgb(235, 235, 149);
+    font: normal 18pt arial;
+    }
+</style>
+<body>
+    <h1>Iniciando os estudos com DOM :D</h1>
+    <p>Aqui vai o resultado</p>
+    <div id = "msg">Clique em mim</div>
+    <p id = 'cont1'>Aprendendo a usar o <strong>Dom</strong> em JS</p>
+
+    <script>
+        //usando o conceito de DOM podemos acessar elementos do nosso projeto por meio de acesso de árvore hierarquica
+        //window.document.write('Olá mundo')
+        //Eu posso até mesmo printar informações específicas dentro do documento
+        //window.document.write(window.document.URL)
+
+        //  Utilizando o DOM você pode navegar entre os elementos de um projeto (e sua árvore hierarquica) e para selecionar um determinado
+        //Elemento existem algumas formas de se fazedr isso.
+        
+        //  O primeiro método é chamado 'Marcador' ou por marca. GetElementBy TagName()
+        //eu consigo selecionar mais de um objeto por que existem vários objetos do mesmo tipo
+        var paragrafo1 = window.document.getElementsByTagName('p')[0] // Pense que os parágrafos se organizam em um tipo de vetor, então para seleciona-los pense que o primeiro é 0
+        //agora vou pegar oq eu guardei dentor de 'paragrafo1' e escrever na tela
+        window.document.write('Está escrito: '+ paragrafo1.innerText)
+        //eu possoa té mudar a cor do elemento
+        paragrafo1.style.color = 'blue'
+        // através do DOM eu posso anexar um elemtento em uma variável e em seguida usar essa váriavel para mudar todo o conteúdo desse elemento
+        Elemento_body = window.document.body // Adicionei todo o body dentro de uma variavel 
+
+        //Elemento_body.style.color = 'white' // mudando toda a cor do body por meio da variavel
+        //Elemento_body.style.background = 'black' // Assim eu consigo mudar todo o fundo do documento acessando o elemento guardado dentro da variavel
+        
+        var paragrafo2 = window.document.getElementsByTagName('p')[1]
+        window.document.write('Está escrito no segundo parágrafo' + paragrafo2.innerHTML) // dessa forma ele puza a formatação do HTML, que as TAGs filhas são responsáveis (p = pai/mãe tags = filho(a))
+
+
+        //O getElementById() é usado quando eu sei o nome de um determinado elemento, para esse exemplo usamos o <div> e adicionamos o id a ele 'msg'
+        var d = window.document.getElementById('msg') //Armazenei o elemento div em uma variável
+        d.style.background = 'green'
+        //Podemos até mesmo alterar seu conteúdo por meio de um comando do DOM
+        d.innerText = 'Olá, Eu mudei oq tava aqui viu :D'
+        
+        //  Levando o último elemento em consideração, podemos ao invés de usar o 'id' podemos atribuir a um elemento o 'name' e usar o getElementByName('Nome do elemento') e usar o mesmo princípio de seleção
+        //de elemento que fizemos anteriormente. Escolha o que você acha mais adequado
+
+        //  Também é possível usar um método mais atual chamado 'querySelector()'
+        //Coloque o tipo do elemento (p = parágrafo... div ... e por ai vai) e depois o símbolo de conexão... e depois o nome, tudo em aspas simples
+        var paragrafo = window.document.querySelector('p#cont1') // se for um id use '#' se for uma classe use '.'
+        paragrafo.style.background = 'white' // :D
+
+    </script>
+
+</body>
+</html>
