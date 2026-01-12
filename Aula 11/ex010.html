@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <h1>Esse é um teste de velocidade!</h1>
+    <input type="text" name="entrada" id="entrada">
+    <input type="button" value="verificar" onclick="validar()" >
+    <div id="velocidade_atual"></div>
+    <p id="exibir_resultado">Resultado...</p>
+</head>
+<body>
+    <script>
+        function validar()
+        {
+            //primeiro pegar os conteúdos dentro das variaveis
+            var valor = window.document.getElementById('entrada')
+            //depoi pegar os conteúdos e transformar em um valor verificavel
+            var resp = Number(valor.value)
+            var b = document.getElementById('velocidade_atual')
+            b.innerText = `Sua velodidade é de ${resp}`
+            if (resp >= 70){
+                
+                var a = window.document.getElementById('exibir_resultado')
+                a.innerText += 'Acima da velodidade, você foi multado!'
+                
+            }
+            b.innerHTML += ' Dirija com cuidado! :D'
+        }
+    </script>
+</body>
+</html>

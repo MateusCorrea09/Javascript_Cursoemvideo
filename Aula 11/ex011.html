@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <h1>Você está em qual país ?</h1>
+    
+    <input type="text" name="txt_entrada" id="txt_entrada">
+    <input type="button" value="Checar" onclick="verificar()">
+    <p name = "txt_print" id="txt_print"></p>
+</head>
+<body>
+    <script>
+        function verificar()
+        {
+            //Eu tenho que lembrar que quando eu pego uma entrada em HTML ela me restorna não
+            //uma string! e sim uma coisa HTML... e a partir dessa eu preciso transformar essa entrada
+            //em algo que eu possa comparar (string, int... float ) e para isso eu uso o '.value' depois de uma entrada
+            
+            var a = window.document.getElementById('txt_entrada').value
+            var b = window.document.getElementById('txt_print')
+            
+            if (a.toLocaleLowerCase() == 'brasil')
+            {
+                b.innerHTML = 'Brasileiro'
+            }else{
+                b.innerHTML = 'Estrangeiro'
+            }
+            
+        }
+
+    </script>
+</body>
+</html>
